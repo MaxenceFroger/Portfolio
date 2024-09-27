@@ -1,0 +1,231 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: American Typewriter, serif;
+    font-weight: 400;
+    color: #e5e5e6da;
+    line-height: 1.7;
+    background: #000;
+}
+
+main {
+  background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, .4)),
+      url('./images/body.jpg');
+}
+
+br {
+  color:white;
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #f0e9f2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5rem;
+    text-decoration: underline;
+    text-decoration-color: #005eff;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+a {
+    color: #f0e9f2;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    outline: 2px solid transparent;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid #005eff;
+}
+
+.bouton {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4.2rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid  #005eff;
+    font-weight: 400;
+}
+
+.bouton:focus {
+    outline: none;
+}
+
+.bouton:hover {
+    right: 0;
+    background: #005eff;
+}
+
+.h1_intro {
+    line-height: 1;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.nav {
+  display : flex;
+  justify-content: flex-end;
+  padding: 0% 10% 0% 0%;
+  font-size: 3rem;
+}
+
+.nav_ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_li:not(:last-child) {
+    margin-right: 4rem;
+}
+
+.nav_link {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_link:hover {
+    color: #005eff;
+}
+
+.haut {
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
+        url('./images/header.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.text_intro {
+  margin: 10% 0% 0% 20%;
+}
+
+.text_intro p {
+    max-width: 700px;
+    font-family: 'Jost', sans-serif;
+    font-size: 2.8rem;
+}
+
+.projets {
+  margin: 0% 0% 0% 20%;
+}
+
+.div_projet {
+    display: flex;
+    align-items: center;
+}
+
+.div_projet:not(:last-child) {
+    margin-bottom: 25rem;
+}
+
+.div_projet_links {
+    display: flex;
+    align-items: center;
+}
+
+.div_text {
+    flex: 0 0 30%;
+    font-size: 2.5rem;
+}
+
+.div_image_projet {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width:100%;
+  max-height:100%;
+}
+
+.projet_image1 {
+  width : 700px;
+  height : 500px;
+}
+
+.projet_image2 {
+  width : 500px;
+  height : 700px;
+}
+
+.projet_image3 {
+  width : 700px;
+  height : 700px;
+}
+
+.a_propos {
+  margin: 0% 0% 0% 20%;
+}
+
+._div_image_a_propos {
+  margin : 5% 0% 0% 0%;
+}
+
+.div_a_propos_text span {
+  white-space: pre-line;
+}
+
+.div_bouton_a_propos {
+  margin : 2% 0% 0% 0%;
+}
+
+.contact {
+  margin: 0% 0% 0% 20%;
+}
+
+.social_ul {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    list-style: none;
+}
+
+.social_image {
+    height: 4rem;
+}
+
+.retour_en_haut {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    background-color: #005eff;
+    border-radius: 50%;
+}
+
+.retour_en_haut_image {
+    height: 70%;
+}
