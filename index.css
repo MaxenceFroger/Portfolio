@@ -192,6 +192,8 @@ a:focus {
 
 .div_a_propos_text span {
   white-space: pre-line;
+  font-family: 'Jost', sans-serif;
+  padding : 0% 20% 0% 0%;
 }
 
 .div_bouton_a_propos {
