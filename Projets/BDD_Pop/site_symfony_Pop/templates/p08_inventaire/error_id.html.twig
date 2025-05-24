@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur : ID invalide{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1 class="text-danger">Erreur</h1>
+        <p class="alert alert-danger">
+            L'ID fourni n'est pas valide ou la figurine de l'inventaire n'a pas été trouvée.
+        </p>
+        <p>Veuillez vérifier l'ID ou retourner à la page précédente.</p>
+        <a href="{{ path('list_inventaire') }}" class="btn btn-primary">Retour à la liste des figurines de l'inventaire</a>
+    </div>
+{% endblock %}

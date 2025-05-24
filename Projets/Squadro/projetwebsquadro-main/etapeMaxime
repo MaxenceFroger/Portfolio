@@ -1,0 +1,17 @@
+J'ai demandé à chatGpt de me générer la classe PlateauSquadro grâce aux consignes données et au diagramme UML (prompt présent dans promptPlateau)
+J'ai demandé à chatGpt de me générer la classe ArrayPieceSquadro grâce aux consignes données et au diagramme UML (prompt présent dans promptSquadro)
+
+
+Analyse de la v1 :
+PlateauSquadro :
+-Oublie de const à certaines variables
+-Mauvaise utilisation du constructeur de PieceSquadro lors des inits
+-Oublie d'un $ devant une variable
+-Balise php fermante en trop
+-Rajouter @access à la doc
+
+ArrayPieceSquadro :
+-Rajouter @access à la doc
+-Balise php fermante en trop
+
+Des TODOS ont été rajoutés directement dans les classes

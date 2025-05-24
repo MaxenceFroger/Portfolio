@@ -1,0 +1,19 @@
+En reprenant les règles du squadro tu vas mtn créer la classe ArrayPieceSquadro
+
+Voici la liste des attributs:
+-pieces: array
+Voici les listes des méthodes
++add(piece: PieceSquadro): void
++remove (index:int): void
++__toString(): string
++toJson(): string
++fromJson(json: string): ArrayPieceSquadro static
+
+Voici quelques explications :
+Cette classe ArrayPieceSquadro va nous permettre de manipuler plus facilement les pièces du jeux regroupées dans un tableau. Elle implémente deux interfaces : ArrayAccess et Countable.
+
+------------------------------------------------------------
+Réponse ChatGPT :
+Voici la classe `ArrayPieceSquadro` que vous avez demandée, avec des commentaires de type Javadoc pour documenter chaque méthode et attribut.
+Cette classe implémente les interfaces `ArrayAccess` et `Countable` pour faciliter la gestion des pièces dans un tableau.
+Si vous avez des ajustements ou des questions, n'hésitez pas à demander!

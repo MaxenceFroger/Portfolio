@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            {% if inventaire is not empty %}
+                <h1 class="title has-text-centered">Suppression effectuée de :</h1>
+                <div class="table-container">
+                    <table class="table is-striped is-fullwidth is-hoverable">
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Possédée</th>
+                            <th>Echangeable</th>
+                            <th>Date d'acquisition</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ inventaire.figurineReference.figurineNom }}</td>
+                            <td>{{ inventaire.figurinePrix}}</td>
+                            <td> {% if inventaire.figurineEstPossedee %}
+                                    Oui
+                                {% else %}
+                                    Non
+                                {% endif %}</td>
+                            <td> {% if inventaire.figurineEchangeable %}
+                                    Oui
+                                {% else %}
+                                    Non
+                                {% endif %}</td>
+                            <td>{% if inventaire.figurineDateAcquisition is not null %}
+                                    {{ inventaire.figurineDateAcquisition|date('d-m-Y') }}
+                                {% endif %}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="notification is-warning has-text-centered">
+                    Figurine introuvable dans l'inventaire.
+                </div>
+            {% endif %}
+            <a href="{{ path('list_inventaire') }}" class="btn btn-primary">Retour à la liste des figurines de l'inventaire</a>
+        </div>
+    </section>
+{% endblock %}

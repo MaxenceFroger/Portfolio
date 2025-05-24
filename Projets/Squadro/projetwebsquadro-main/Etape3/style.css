@@ -1,0 +1,56 @@
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.case-vide {
+    background-color: #e0e0e0; /* Gris clair */
+    border: 1px solid #999;
+}
+
+.case-neutre {
+    background-color: #a9a9a9; /* Gris foncé */
+    border: 1px solid #555;
+}
+
+.piece-noire {
+    background-color: #000000; /* Noir */
+    color: #ffffff;
+    border: 2px solid #ff0000; /* Bordure noire */
+}
+
+.piece-noire.selected {
+    border: 2px solid #00ff00; /* Rouge pour les pièces sélectionnées */
+}
+
+.piece-blanche {
+    background-color: #ffffff; /* Blanc */
+    border: 2px solid #ff0000; /* Bordure bleue */
+}
+
+.piece-blanche.selected {
+    border: 2px solid #00ff00; /* Vert pour les pièces sélectionnées */
+}
+
+.case-rose{
+    background-color: #FEBFD2  ; /* Gris foncé */
+    border: 1px solid #555;
+}

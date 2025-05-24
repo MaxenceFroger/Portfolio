@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Collections{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Liste des Collections</h1>
+            <div class="has-text-centered">
+                <a href="{{ path('create_collection2') }}" class="button is-primary mb-4 has-text-centered">Créer une nouvelle collection</a>
+            </div>
+            <div class="mb-4">
+                {{ form_start(form) }}
+                {{ form_row(form.search) }}
+                {{ form_row(form.submit) }}
+                {{ form_end(form) }}
+            </div>
+            {% if collections is not empty %}
+                <div class="table-container">
+                    <table class="table is-striped is-fullwidth is-hoverable">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Catégorie</th>
+                            <th>Licence</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for collection in collections %}
+                            <tr>
+                                <td>{{ collection.collectionId }}</td>
+                                <td>{{ collection.collectionNom }}</td>
+                                <td>{{ collection.collectionCategorie }}</td>
+                                <td>{{ collection.collectionLicence }}</td>
+                                <td><a href="{{ path('update2_by_id', {'id': collection.collectionId}) }}"
+                                       class="button is-primary">Modifier</a></td>
+                                <td>
+                                    <button class="button is-primary"
+                                            data-target="{{ 'modal'~collection.collectionId }}">Supprimer
+                                    </button>
+                                    <div class="modal" id="{{ 'modal'~collection.collectionId }}">
+                                        <div class="modal-background"></div>
+                                        <div class="modal-content">
+                                            <div class="box">
+                                                <h1 class="title">Suppression</h1>
+                                                <p>Êtes-vous sûr de vous ?</p>
+                                                <div class="buttons is-flex">
+                                                    <button class="button is-danger close-modal">Non</button>
+                                                    <form action="{{ path('deleteCollection_by_id', {'id': collection.collectionId}) }}" method="POST">
+                                                        <button type="submit" class="button is-primary">Oui</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="notification is-warning has-text-centered">
+                    Aucune collection trouvée.
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

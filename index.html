@@ -1,164 +1,244 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="./images/favicon.png" rel="shortcut icon" type="image/png"/>
     <title>
-      Maxence Froger | Developpeur.
+        Maxence Froger | Developpeur.
     </title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
+    <link href="index.css" rel="stylesheet"/>
+</head>
 
-  <body>
+<body>
 
-    <header class="haut" id="top">
-      <div class="menu">
+<header class="haut" id="top">
+    <div class="menu">
         <nav class="nav">
-          <ul class="nav_ul">
-            <li class="nav_li"><a href="#projets" class="nav_link">Projets</a></li>
-            <li class="nav_li">
-              <a href="#a_propos" class="nav_link">A propos</a>
-            </li>
-            <li class="nav_li">
-              <a href="#contact" class="nav_link">Contact</a>
-            </li>
-          </ul>
+            <ul class="nav_ul">
+                <li class="nav_li"><a class="nav_link" href="#projets">Projets</a></li>
+                <li class="nav_li">
+                    <a class="nav_link" href="#a_propos">A propos</a>
+                </li>
+                <li class="nav_li">
+                    <a class="nav_link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </nav>
-      </div>
-      <div class="text_intro">
+    </div>
+    <div class="text_intro">
         <h1 class="h1_intro">
-        <span>Maxence Froger</span>
+            <span>Maxence Froger</span>
         </h1>
-        <p>Je m’appelle Maxence Froger, je suis en licence Informatique à l’Université du Havre. Je pratique quotidiennement la programmation et je veux devenir développeur dans le domaine des jeux vidéo. Je programme en Java, en C/C++/C#, en Python, en HTML/CSS/PHP, en SQL, et en Visual Basic</p>
-        <a href="#contact" class="bouton">Me contacter</a>
-      </div>
-    </header>
+        <p>Je m’appelle Maxence Froger, je suis en licence Informatique à l’Université du Havre. Je pratique
+            quotidiennement la programmation et je veux devenir développeur dans le domaine des jeux vidéo. Je programme
+            en Java, en C/C++/C#, en Python, en HTML/CSS/PHP, en SQL, et en Visual Basic</p>
+        <a class="bouton" href="#contact">Me contacter</a>
+    </div>
+</header>
 
-    <main role="main">
-      <section class="projets" id="projets">
+<main role="main">
+    <section class="projets" id="projets">
         <h2>Mes Projets</h2>
         <div class="div_projets">
-          <div class="div_projet">
-            <div class="div_text">
-              <h3>Site de gestion de base de données</h3>
-              <p>
-                Un site pour gérer une base de données de résulats de compétitions sportives.
-              </p>
-              <ul class="list_languages">
-                <li>PHP</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SQL</li>
-              </ul>
 
-              <div class="div_projet_links">
-                <a href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Site_PHP_BDD" class="link_text">
-                  Voir le code.
-                </a>
-              </div>
-            </div>
-            <div class="div_image_projet">
-              <img src="./images/php2.png" class="projet_image1" alt="Project 1" />
-            </div>
-          </div>
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Site de gestion de base de données de figurine Pop</h3>
+                    <p>
+                        Un site pour gérer une base de données de figurine Pop, CRUD complet avec barre de recherche.
+                    </p>
+                    <ul class="list_languages">
+                        <li>PHP</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>Symfony</li>
+                    </ul>
 
-          <div class="div_projet">
-            <div class="div_text">
-              <h3>Simon</h3>
-              <p>
-                Une application de Simon pour Android
-              </p>
-              <ul class="list_languages">
-                <li>Java</li>
-                <li>Android Studio</li>
-              </ul>
+                    <div class="div_projet_links">
+                        <a class="link_text"
+                           href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/BDD_Pop">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 6" class="projet_image1" src="./images/pop.png"/>
+                </div>
+            </div>
 
-              <div class="div_projet_links">
-                <a href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Simon" class="link_text">
-                  Voir le code.
-                </a>
-              </div>
-            </div>
-            <div class="div_image_projet">
-              <img src="./images/simon2.jpg" class="projet_image2" alt="Project 2" />
-            </div>
-          </div>
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Jeu Squadro en ligne</h3>
+                    <p>
+                        Un site pour jouer à Squadro en ligne local.
+                    </p>
+                    <ul class="list_languages">
+                        <li>PHP</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                    </ul>
 
-          <div class="div_projet">
-            <div class="div_text">
-              <h3>Sudoku</h3>
-              <p>
-                Sudoku fait en C
-              </p>
-              <ul class="list_languages">
-                <li>C</li>
-                <li>MakeFile</li>
-              </ul>
+                    <div class="div_projet_links">
+                        <a class="link_text"
+                           href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Squadro">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 5" class="projet_image1" src="./images/squadro.png"/>
+                </div>
+            </div>
 
-              <div class="div_projet_links">
-                <a href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/sudoku" class="link_text">
-                  Voir le code.
-                </a>
-              </div>
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Application de Routage</h3>
+                    <p>
+                        Une application permettant de simuler des routages.
+                    </p>
+                    <ul class="list_languages">
+                        <li>Java</li>
+                        <li>Swing</li>
+                        <li>GraphStream</li>
+                    </ul>
+
+                    <div class="div_projet_links">
+                        <a class="link_text"
+                           href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Routage">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 4" class="projet_image1" src="./images/routage.png"/>
+                </div>
             </div>
-            <div class="div_image_projet">
-              <img src="./images/sudoku.png" class="projet_image3" alt="Project 3" />
+
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Site de gestion de base de données</h3>
+                    <p>
+                        Un site pour gérer une base de données de résulats de compétitions sportives.
+                    </p>
+                    <ul class="list_languages">
+                        <li>PHP</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                    </ul>
+
+                    <div class="div_projet_links">
+                        <a class="link_text"
+                           href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Site_PHP_BDD">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 3" class="projet_image1" src="./images/php2.png"/>
+                </div>
             </div>
-          </div>
+
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Simon</h3>
+                    <p>
+                        Une application de Simon pour Android
+                    </p>
+                    <ul class="list_languages">
+                        <li>Java</li>
+                        <li>Android Studio</li>
+                    </ul>
+
+                    <div class="div_projet_links">
+                        <a class="link_text" href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Simon">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 2" class="projet_image2" src="./images/simon2.jpg"/>
+                </div>
+            </div>
+
+            <div class="div_projet">
+                <div class="div_text">
+                    <h3>Sudoku</h3>
+                    <p>
+                        Sudoku fait en C
+                    </p>
+                    <ul class="list_languages">
+                        <li>C</li>
+                        <li>MakeFile</li>
+                    </ul>
+
+                    <div class="div_projet_links">
+                        <a class="link_text" href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/sudoku">
+                            Voir le code.
+                        </a>
+                    </div>
+                </div>
+                <div class="div_image_projet">
+                    <img alt="Project 1" class="projet_image1" src="./images/sudoku.png"/>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="a_propos" id="a_propos">
+    <section class="a_propos" id="a_propos">
         <h2>A Propos</h2>
         <div class="div_a_propos">
 
-          <div class="div_a_propos_text">
+            <div class="div_a_propos_text">
             <span>
               Passionné de jeux vidéo depuis mon enfance, j'ai commencé à m'intéresser à la programmation, d'abord par des commandes dans Minecraft, puis en regardant mon père programmer. J'ai commencé à coder au collège en Visual Basic, puis en Python, en Java, et enfin en C# avant de commencer ma Licence d'Informatique. J'ai depuis appris de nombreux autres langages tels que C, HTML, CSS, PHP, SQL, Shell, Bash, Haskell, Processing, etc, ainsi que certains Frameworks tels que Android Studio ou Unity.
             </span>
-          </div>
-          <div class="div_bouton_a_propos">
-            <a href="#" class="bouton">Mon CV</a>
-          </div>
+            </div>
+            <div class="div_bouton_a_propos">
+                <a class="bouton" href="#">Mon CV</a>
+            </div>
 
-          <div class="_div_image_a_propos">
-            <img class="a_propos_image" src="./images/Maxence.jpg" alt="" />
-          </div>
+            <div class="_div_image_a_propos">
+                <img alt="" class="a_propos_image" src="./images/Maxence.jpg"/>
+            </div>
 
         </div>
-      </section>
+    </section>
 
-      <section class="contact" id="contact">
+    <section class="contact" id="contact">
         <h2>Me Contacter</h2>
         <div class="contact_info">
-          <p>
-            Vous pouvez me contacter par cette addresse email :
-          </p>
-          <a href="mailto:maxence.froger@gmail.com" class="bouton">maxence.froger@gmail.com</a>
+            <p>
+                Vous pouvez me contacter par cette addresse email :
+            </p>
+            <a class="bouton" href="mailto:maxence.froger@gmail.com">maxence.froger@gmail.com</a>
         </div>
-      </section>
+    </section>
 
-    </main>
+</main>
 
-    </br>
+</br>
 
-    <footer class="bas">
-      <div class="div_bas">
+<footer class="bas">
+    <div class="div_bas">
         <ul class="social_ul">
-          <li class="social_li">
-            <a href="https://github.com/MaxenceFroger/Portfolio/" title="Lien Github">
-              <img src="./images/github.svg" class="social_image" alt="Github">
-            </a>
-          </li>
+            <li class="social_li">
+                <a href="https://github.com/MaxenceFroger/Portfolio/" title="Lien Github">
+                    <img alt="Github" class="social_image" src="./images/github.svg">
+                </a>
+            </li>
         </ul>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <a href="#top" class="retour_en_haut" title="Retour en haut">
-      <img src="./images/arrow-up.svg" alt="Retour en haut" class="retour_en_haut_image"/>
-    </a>
-  </body>
+<a class="retour_en_haut" href="#top" title="Retour en haut">
+    <img alt="Retour en haut" class="retour_en_haut_image" src="./images/arrow-up.svg"/>
+</a>
+</body>
 
 </html>

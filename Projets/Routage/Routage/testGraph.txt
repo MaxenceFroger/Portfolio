@@ -1,0 +1,14 @@
+Node C1
+Node C2
+Node C3
+Node C4
+Node C5
+Edge C1 C2 10
+Edge C1 C3 10
+Edge C2 C3 15
+Edge C2 C4 10
+Edge C3 C4 25
+Edge C5 C4 20
+Edge C5 C3 35
+PC A
+Connection A C1

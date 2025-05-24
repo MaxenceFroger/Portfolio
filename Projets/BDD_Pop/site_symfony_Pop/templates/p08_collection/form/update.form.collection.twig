@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mettre à jour la collection{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Mettre à jour la collection</h1>
+
+            <form method="post" action="{{ path('update2_by_id', {'id': collection.collectionId}) }}" class="box">
+                {{ form_start(form) }}
+                {{ form_row(form.collection_nom) }}
+                {{ form_row(form.collection_licence) }}
+                {{ form_row(form.collection_categorie) }}
+                <div class="buttons">
+                {{ form_row(form.save) }}
+                {{ form_row(form.annuler) }}
+                </div>
+                {{ form_rest(form) }}
+                {{ form_end(form)}}
+            </form>
+        </div>
+    </section>
+{% endblock %}

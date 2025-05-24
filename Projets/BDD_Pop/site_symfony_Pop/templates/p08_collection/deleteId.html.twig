@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            {% if collection is not empty %}
+                <h1 class="title has-text-centered">Suppression effectuée de :</h1>
+                <div class="table-container">
+                    <table class="table is-striped is-fullwidth is-hoverable">
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Catégorie</th>
+                            <th>Licence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ collection.collectionNom }}</td>
+                            <td>{{ collection.collectionCategorie }}</td>
+                            <td>{{ collection.collectionLicence }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="notification is-warning has-text-centered">
+                    Aucune collection trouvée.
+                </div>
+            {% endif %}
+            <a href="{{ path('list_collection') }}" class="button is-primary">Retour à la liste des collections</a>
+        </div>
+    </section>
+{% endblock %}

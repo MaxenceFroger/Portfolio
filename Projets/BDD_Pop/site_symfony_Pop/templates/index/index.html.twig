@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index!{% endblock %}
+
+{% block body %}
+    <div class="container has-text-centered">
+        <h1 class="title">Figurine POP</h1>
+        <div class="columns">
+            <div class="column"> <a href="{{ path('list_collection') }}" class="button is-primary">Collection</a></div>
+            <div class="column"> <a href="{{ path('list_figurine') }}" class="button is-primary">Figurines</a></div>
+            <div class="column"> <a href="{{ path('list_inventaire') }}" class="button is-primary">Inventaire</a></div>
+        </div>
+        <div class="container">
+            <div class="notification is-success">
+                Les figurines Funko Pop sont facilement reconnaissables : elles ont une tête disproportionnée sans bouche, avec de grands yeux et un petit corps.
+                Confectionnées en vinyle, elles mesurent en moyenne 9 cm, mais il existe des figurines plus grandes, d'environ 15 cm,
+                qui représentent des personnages réputés pour leur grande taille. Grâce à leurs accessoires, leurs coiffures et leurs tenues,
+                elles ressemblent à des personnages de la culture populaire, issus de films, de dessins animés, de jeux vidéo, de comics ou du monde sportif.
+                Certaines figurines existent en plusieurs versions, dans différentes tenues. Selon les modèles, elles peuvent parfois être accompagnées d'un véhicule
+                ou d'un décor de film.
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

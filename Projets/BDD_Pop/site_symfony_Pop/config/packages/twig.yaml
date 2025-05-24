@@ -1,0 +1,7 @@
+twig:
+    file_name_pattern: '*.twig'
+    form_themes: ['bulma_layout.html.twig']
+#https://github.com/dsmink/twig-bulma-form-theme-bundle/tree/master
+when@test:
+    twig:
+        strict_variables: true

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une figurine caracteristique{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Créer une figurine caracteristique</h1>
+
+            <form method="post" action="{{ path('create_figurine2') }}" class="box">
+                {{ form_start(form) }}
+                {{ form_row(form.figurine_reference) }}
+                {{ form_row(form.figurine_nom) }}
+                {{ form_row(form.figurine_personnage) }}
+                {{ form_row(form.figurine_taille) }}
+                {{ form_row(form.figurine_date_sortie) }}
+                {{ form_row(form.figurine_popid) }}
+                {{ form_row(form.figurine_chase) }}
+                {{ form_row(form.collection_id) }}
+                <div class="buttons">
+                {{ form_row(form.save) }}
+                {{ form_row(form.annuler) }}
+                </div>
+                {{ form_rest(form) }}
+                {{ form_end(form)}}
+            </form>
+        </div>
+    </section>
+{% endblock %}

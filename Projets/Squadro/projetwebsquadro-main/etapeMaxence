@@ -1,0 +1,4 @@
+J'ai utilisé le prompt 1 pour préparer chatgpt puis, le prompt 2 pour créer la classe PieceSquadro et le prompt 3 pour créer la classe ActionSquadro.
+
+La classe PieceSquadro à 3 erreur mineurs : il faut des commentaire type PHPDoc, les constantes doivent préciser qu'elles sont de type int, et la balise fermante n'est pas nécessaire en fin de fichier.
+La classe ActionSquadro à été générer sans la classe PLateau Squadro ce qui à créer de nombreuse incohérence, il faut des commentaire type PHPDoc, et la balise fermante n'est pas nécessaire en fin de fichier.

@@ -1,0 +1,97 @@
+Prompt 1 :
+
+Description du projet
+
+On s'intéresse à Squadro un jeu de stratégie abstrait à deux joueurs.
+
+Chaque joueur dispose de 5 pièces (noires ou blanches). Le plateau de jeu est constitué de 7 lignes et 7 colonnes, les coins ne sont pas utilisés (cases neutres).
+
+Les pièces blanches se déplacent horizontalement et les pièces noires se déplacent verticalement. Les vitesses de déplacement des pièces dépend du trajet en cours (aller ou retour) et de la ligne (ou de la colonne) où se site le mouvement.
+
+En dehors des coins, les cases situées à l'ouest sont les points de départ des cases blanches, les cases situées au sud sont les points de départ des cases noires.
+
+Les cases situées à l'est (respectivement au nord) sont les points de retournement des pièces.
+
+Au début de la partie les pièces blanches sont donc placées sur les 5 cases centrales à l'ouest du plateau et les pièces noires au sud.
+
+Pour gagner, un joueur doit faire un aller-retour avec 4 de ses 5 pièces. Pour cela, lors de son tour, un joueur déplace une pièce en respectant les règles suivantes :
+
+    une pièce se déplace du nombre de cases indiquées coté départ à l'aller, coté retournement lors du retour ;
+    une pièce peut se déplacer si sa case d'arrivée est libre ;
+    si une pièce saute au dessus d'une ou deux pièces adverses lors de son mouvement, alors la ou les pièces adverses enjambées sont renvoyées à leur case départ ou à leur case de retournement (si elles sont dans leur phase retour) ;
+    Lorsqu'une pièce a achevé son aller-retour, elle est retirée de la partie
+
+De haut en bas, les cinq lignes où circulent les pièces blanches permettent de les déplacer à l'aller sur 1, 3, 2, 3 et 1 case ; au retour la vitesse des déplacements changent et se font sur 3, 1, 2, 1, 3 cases.
+
+De gauche à droite, les cinq colonnes où circulent les pièces noires permettent de les déplacer à l'aller sur 3, 1, 2, 1 et 3 cases ; au retour les déplacement changent et se font sur 1, 3, 2, 3, 1 case.
+
+On veut créer des classes php pour créer ce jeu.
+Je vais te donner des versions texte des schémas UML ainsi que des précision.
+Tu devra me générer ces classes.
+Je vais te les demander une à une.
+
+Prompt 2 :
+schéma UML(+ signifie public, -signifie private, #signifie protected) :
+Piece Squadro
+variables:
+static +BLANC: const = 0
+static +NOIR: const = 1
+static +VIDE: const = -1
+static +NEUTRE: const = -2
+static +NORD: const = 0
+static +EST: const = 1
+static +SUD: const = 2
+static +OUEST: const = 3
+#couleur : int
+#direction : int
+
+fonctions :
+- __construct(couleur:int,direction:int)
++getCouleur(): int
++getDirection(): int
++inverseDirection() : void
++__toString(): string
+static +initVide() : PieceSquadro
+static +initNeutre() : PieceSquadro
+static +initNoirNord() : PieceSquadro
+static +initNoirSud() : PieceSquadro
+static +initBlancEst() : PieceSquadro
+static +initBlancOuest() : PieceSquadro
++toJson(): string
+static +fromJson(json:string): PieceSquadro
+
+Précision :
+Cette classe gère à la fois les pièces du jeu et les emplacements du plateau. On considère donc également les emplacements vides et neutres du plateau comme des pièces. Ainsi, une pièce (ou une case du plateau) est caractérisée par une couleur et une direction. Pour les représenter, on utilise des constantes entières : BLANC, NOIR, VIDE, NEUTRE, NORD, EST, SUD et OUEST. Le constructeur est privé pour imposer l'utilisation des méthodes statiques initVide, initNoirNord, etc. pour générer des pièces correctes à l'aide des constantes de classe.
+
+La méthode inverseDirection() permet de gérer le retournement d'une pièce lorsqu'elle a atteint sa case de retournement.
+
+La méthode toJson() renvoie une chaine de caractères correspondant à la représentation au format JSON de l'objet appelant.
+
+La méthode de classe fromJson() réalise l'opération inverse : elle retourne une instance de PieceSquadro correspondant à la représentation JSon passée en paramètre.
+
+Prompt 3:
+schéma UML(+ signifie public, -signifie private, #signifie protected) :
+ActionSquadro
+variables:
++plateau: PlateauSquadro
++__construct(p:PLateauSquadro)
++estjouablePiece(x:int,y:int):bool
++jouePiece(x:int,y:int):void
++reculePiece(x:int,y:int):void
++sortPiece(couleur:int,rang:int):void
++remporteVictoire(couleur:int):bool
+
+Précision :
+Cette classe définit les méthodes gérant les règles du jeu : détection d'une victoire, possibilité de jouer une pièce,, pose de la pièce.
+
+Ces méthodes auraient pu être intégrées à la classe PlateauSquadro, mais ce n'est pas le choix qui a été fait ! sourire
+
+La méthode estJouablePiece teste si on peut avancer une pièce (condition énoncée dans les règles).
+
+La méthode jouePiece réalise le mouvement d'une pièce, opère l'éventuel retournement ou la sortie ainsi que les éventuels reculs des pièces adverses s'il y en a qui sont "sautées" lors du mouvement.
+
+La méthode reculePiece renvoie une pièce au début de son parcours (aller ou retour selon sa direction)
+
+La méthode sortPiece retire une pièce du plateau de jeu lorsqu'elle a fini son aller-retour.
+
+La méthode remporteVictoire teste si une couleur a gagné la partie.

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            {% if figurine is not empty %}
+                <h1 class="title has-text-centered">Suppression effectuée de :</h1>
+                <div class="table-container">
+                    <table class="table is-striped is-fullwidth is-hoverable">
+                        <thead>
+                        <tr>
+                            <th>Référence</th>
+                            <th>Nom</th>
+                            <th>Personnage</th>
+                            <th>Taille</th>
+                            <th>Date de sortie</th>
+                            <th>POP ID</th>
+                            <th>Chase</th>
+                            <th>Collection</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <tr>
+                            <td>{{ figurine.figurineReference }}</td>
+                            <td>{{ figurine.figurineNom }}</td>
+                            <td>{{ figurine.figurinePersonnage }}</td>
+                            <td>{{ figurine.figurineTaille }}</td>
+                            <td>{{ figurine.figurineDateSortie|date('d-m-Y') }}</td>
+                            <td>{{ figurine.figurinePopid }}</td>
+                            <td> {% if figurine.figurineChase %}
+                                    Oui
+                                {% else %}
+                                    Non
+                                {% endif %}</td>
+                            <td>{{ figurine.collectionId.collectionNom }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="notification is-warning has-text-centered">
+                    Aucune figurine trouvée.
+                </div>
+            {% endif %}
+            <a href="{{ path('list_figurine') }}" class="button is-primary">Retour à la liste des figurines</a>
+        </div>
+    </section>
+{% endblock %}

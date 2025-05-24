@@ -1,0 +1,14 @@
+Node C1
+Node C2
+Node C3
+Node C4
+Node C5
+Node C6
+Node C7
+Edge C1 C2 2
+Edge C2 C3 2
+Edge C3 C4 2
+Edge C4 C5 2
+Edge C5 C6 2
+Edge C6 C7 2
+Edge C1 C7 50

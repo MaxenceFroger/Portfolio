@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inventaire{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Liste des figurines dans l'inventaire</h1>
+            <div class="has-text-centered">
+                <a href="{{ path('create_inventaire2') }}" class="button is-primary mb-4 has-text-centered">Ajouter une figurine à l'inventaire</a>
+            </div>
+            <div class="mb-4">
+                {{ form_start(form) }}
+                {{ form_row(form.search) }}
+                {{ form_row(form.submit) }}
+                {{ form_end(form) }}
+            </div>
+            {% if inventaires is not empty %}
+                <div class="table-container">
+                    <table class="table is-striped is-fullwidth is-hoverable">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Possédée</th>
+                            <th>Echangeable</th>
+                            <th>Date d'acquisition</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for inventaire in inventaires %}
+                            <tr>
+                                <td>{{ inventaire.figurineId }}</td>
+                                <td>{{ inventaire.figurineReference.figurineNom }}</td>
+                                <td>{{ inventaire.figurinePrix}}</td>
+                                <td> {% if inventaire.figurineEstPossedee %}
+                                        Oui
+                                    {% else %}
+                                        Non
+                                    {% endif %}</td>
+                                <td> {% if inventaire.figurineEchangeable %}
+                                        Oui
+                                    {% else %}
+                                        Non
+                                    {% endif %}</td>
+                                <td>{% if inventaire.figurineDateAcquisition is not null %}
+                                    {{ inventaire.figurineDateAcquisition|date('d-m-Y') }}
+                                    {% endif %}</td>
+                                <td><a href="{{ path('update_inventaire2', {'id': inventaire.figurineId}) }}" class="button is-primary">Modifier</a></td>
+                                <td>
+                                    <button class="button is-primary" data-target="{{ 'modal'~inventaire.figurineId}}" >Supprimer</button>
+                                    <div class="modal" id="{{ 'modal'~inventaire.figurineId }}">
+                                        <div class="modal-background"></div>
+                                        <div class="modal-content">
+                                            <div class="box">
+                                                <h1 class="title">Suppression</h1>
+                                                <p>Êtes-vous sûr de vous ?</p>
+                                                <div class="buttons is-flex">
+                                                    <button class="button is-danger close-modal">Non</button>
+                                                    <form action="{{ path('deleteInventaire_by_id', {'id': inventaire.figurineId}) }}" method="POST">
+                                                        <button type="submit" class="button is-primary">Oui</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="notification is-warning has-text-centered">
+                    Figurine introuvable dans l'inventaire.
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

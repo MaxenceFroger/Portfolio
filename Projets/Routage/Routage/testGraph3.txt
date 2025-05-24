@@ -1,0 +1,15 @@
+Node C1
+Node C2
+Node C3
+Node C4
+Node C5
+Node C6
+Edge C1 C2 10
+Edge C1 C3 20
+Edge C2 C3 5
+Edge C2 C4 15
+Edge C3 C4 10
+Edge C3 C5 30
+Edge C4 C5 10
+Edge C4 C6 5
+Edge C5 C6 5

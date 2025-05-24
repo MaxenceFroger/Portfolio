@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une figurine{% endblock %}
+
+{% block body %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Modifier une figurine</h1>
+
+            <form method="post" action="{{ path('update_inventaire2', {'id': inventaire.figurineId}) }}" class="box">
+                {{ form_start(form) }}
+                {{ form_row(form.figurine_reference) }}
+                {{ form_row(form.figurine_prix) }}
+                {{ form_row(form.figurine_echangeable) }}
+                {{ form_row(form.figurine_est_possedee) }}
+                {{ form_row(form.figurine_date_acquisition) }}
+                <div class="buttons">
+                    {{ form_row(form.save) }}
+                    {{ form_row(form.annuler) }}
+                </div>
+                {{ form_rest(form) }}
+                {{ form_end(form)}}
+            </form>
+        </div>
+    </section>
+{% endblock %}

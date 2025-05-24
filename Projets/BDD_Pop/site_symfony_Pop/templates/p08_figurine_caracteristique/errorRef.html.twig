@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur : Ref invalide{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1 class="text-danger">Erreur</h1>
+        <p class="alert alert-danger">
+            La référence fournie n'est pas valide ou la figurine n'a pas été trouvée.
+        </p>
+        <p>Veuillez vérifier la référence ou retourner à la page précédente.</p>
+        <a href="{{ path('list_figurine') }}" class="btn btn-primary">Retour à la liste des figurines</a>
+    </div>
+{% endblock %}
