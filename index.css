@@ -134,6 +134,34 @@ a:focus {
     font-size: 2.8rem;
 }
 
+.experiences {
+    padding: 0% 20% 5% 20%;
+}
+
+.div_experiences {
+    align-items: center;
+}
+
+.div_text_experience {
+    font-size: 2.5rem;
+}
+
+.div_image_experiences {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width:100%;
+    max-height:100%;
+}
+
+.list_languages_experiences {
+
+}
+
+
+
 .projets {
   margin: 0% 0% 0% 20%;
 }
@@ -203,6 +231,15 @@ a:focus {
 
 .contact {
   margin: 0% 0% 0% 20%;
+}
+
+.social_ul li {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.social_image {
+    border-radius: 50%;
 }
 
 .social_ul {

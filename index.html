@@ -17,6 +17,7 @@
     <div class="menu">
         <nav class="nav">
             <ul class="nav_ul">
+                <li class="nav_li"><a class="nav_link" href="#experiences_pro">Expériences</a></li>
                 <li class="nav_li"><a class="nav_link" href="#projets">Projets</a></li>
                 <li class="nav_li">
                     <a class="nav_link" href="#a_propos">A propos</a>
@@ -33,12 +34,39 @@
         </h1>
         <p>Je m’appelle Maxence Froger, je suis en licence Informatique à l’Université du Havre. Je pratique
             quotidiennement la programmation et je veux devenir développeur dans le domaine des jeux vidéo. Je programme
-            en Java, en C/C++/C#, en Python, en HTML/CSS/PHP, en SQL, et en Visual Basic</p>
+            en Java, en C/C++/C#, en Python, en HTML/CSS/PHP, en SQL, et en Visual Basic.</p>
         <a class="bouton" href="#contact">Me contacter</a>
     </div>
 </header>
 
 <main role="main">
+    <section class="experiences" id="experiences_pro">
+        <h2>Mes Expériences Professionnelles</h2>
+        <div class="div_experiences">
+            <div class="div_text_experience">
+                <h3>Stage : Création d'un site intranet de type CRM afin de gérer les données du cabinet de psychothérapie et d'améliorer son fonctionnement quotidien.</h3>
+                <p>7 Avril au 6 Juin - Loanne Froger Psychothérapie</p>
+                <p>
+                    Développement d’un CRM complet pour cabinets de psychologie, intégrant la gestion centralisée avec un moteur de recherche des patients (coordonnées, fichier word lié, etc), des psychologues (profils, identifiants, etc), des séances (date, participants, rappel automatique, etc), des questionnaires (création dynamique, évaluation, patient et psy concernées), ainsi qu’un système d'email interne, de facturation, de suivi comptable, de personnalisation visuelle (thèmes), de sauvegarde automatique de la base de données avec accès restreint aux administrateurs et une intégration avec Google Calendar via des pièces jointe .ics
+                </p>
+                <ul class="list_languages_experiences">
+                    <li>PHP</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SQL</li>
+                    <li>JavaScript</li>
+                    <li>Symfony</li>
+                </ul>
+            </div>
+            <div class="div_image_experiences">
+                <img alt="Stage 1" class="experiences_image1" src="./images/site1.PNG"/>
+                <img alt="Stage 2" class="experiences_image1" src="./images/Filtre_Trie.PNG"/>
+                <img alt="Stage 3" class="experiences_image1" src="./images/email.PNG"/>
+            </div>
+        </div>
+
+    </section>
+
     <section class="projets" id="projets">
         <h2>Mes Projets</h2>
         <div class="div_projets">
@@ -46,8 +74,10 @@
             <div class="div_projet">
                 <div class="div_text">
                     <h3>Site de gestion de base de données de figurine Pop</h3>
+                    <p>14 Mars 2025 au 27 Mars 2025 - Université du Havre</p>
                     <p>
-                        Un site pour gérer une base de données de figurine Pop, CRUD complet avec barre de recherche.
+                        J'ai créé une base de données normalisée respectant les conventions SQL sur les figurines POP, avec de nombreux Trigger, View et fonction en pl pgsql, le tout en MySQL,PostgrSQL et Oracle.
+                        Ensuite, j'ai développé un site internet CRUD permettant de manipuler la base de donnée, avec notamment une barre de recherche. Ce projet a été réalisé en collaboration avec Maxime Bertois.
                     </p>
                     <ul class="list_languages">
                         <li>PHP</li>
@@ -66,15 +96,17 @@
                     </div>
                 </div>
                 <div class="div_image_projet">
-                    <img alt="Project 6" class="projet_image1" src="./images/pop.png"/>
+                    <img alt="Project 6" class="projet_image1" src="./images/Pop2Capture.JPG"/>
                 </div>
             </div>
 
             <div class="div_projet">
                 <div class="div_text">
                     <h3>Jeu Squadro en ligne</h3>
+                    <p>22 Janvier 2025 au 28 Février 2025 - Université du Havre</p>
                     <p>
-                        Un site pour jouer à Squadro en ligne local.
+                        J'ai recréé le jeu de société Squadro en PHP afin de pouvoir jouer une partie de Squadro sur une page web, puis enregistrer les informations nécessaires dans une base de données pour faire un site permettant d'y jouer en local asynchrone.
+                        Ce projet a été réalisé en collaboration avec Maxime Bertois.
                     </p>
                     <ul class="list_languages">
                         <li>PHP</li>
@@ -91,15 +123,17 @@
                     </div>
                 </div>
                 <div class="div_image_projet">
-                    <img alt="Project 5" class="projet_image1" src="./images/squadro.png"/>
+                    <img alt="Project 5" class="projet_image1" src="./images/SquadroCapture.JPG"/>
                 </div>
             </div>
 
             <div class="div_projet">
                 <div class="div_text">
                     <h3>Application de Routage</h3>
+                    <p>2 Mars 2025 au 29 Mars 2025 - Université du Havre</p>
                     <p>
-                        Une application permettant de simuler des routages.
+                        J'ai développé une application permettant de représenter une topologie réseau de plusieurs machines, commutateur et leurs artères de communication avec Java Swing.
+                        La topologie peut être créée à partir d'un fichier text, ou manuellement dans l'application. L'application permet aussi de calculer les tables de routage et de determiner le chemin optimal entre deux machines.
                     </p>
                     <ul class="list_languages">
                         <li>Java</li>
@@ -115,40 +149,16 @@
                     </div>
                 </div>
                 <div class="div_image_projet">
-                    <img alt="Project 4" class="projet_image1" src="./images/routage.png"/>
-                </div>
-            </div>
-
-            <div class="div_projet">
-                <div class="div_text">
-                    <h3>Site de gestion de base de données</h3>
-                    <p>
-                        Un site pour gérer une base de données de résulats de compétitions sportives.
-                    </p>
-                    <ul class="list_languages">
-                        <li>PHP</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SQL</li>
-                    </ul>
-
-                    <div class="div_projet_links">
-                        <a class="link_text"
-                           href="https://github.com/MaxenceFroger/Portfolio/tree/main/Projets/Site_PHP_BDD">
-                            Voir le code.
-                        </a>
-                    </div>
-                </div>
-                <div class="div_image_projet">
-                    <img alt="Project 3" class="projet_image1" src="./images/php2.png"/>
+                    <img alt="Project 4" class="projet_image1" src="./images/RoutageCapture.JPG"/>
                 </div>
             </div>
 
             <div class="div_projet">
                 <div class="div_text">
                     <h3>Simon</h3>
+                    <p>Avril 2024 à Mai 2024 - Université du Havre</p>
                     <p>
-                        Une application de Simon pour Android
+                        J'ai développé une application simple mobile pour jouer au jeu du "Simon", avec une page menu principale et une page de jeu, avec un enregistrement du meilleur score
                     </p>
                     <ul class="list_languages">
                         <li>Java</li>
@@ -169,8 +179,9 @@
             <div class="div_projet">
                 <div class="div_text">
                     <h3>Sudoku</h3>
+                    <p>Février 2024 à Mars 2024 - Université du Havre</p>
                     <p>
-                        Sudoku fait en C
+                        J'ai recréé le jeu du Sudoku dans un terminal, et utiliser des threads pour vérifier que chaque partie ai bien une solution unique. Plusieurs niveaux de difficultés enlèvant plus ou moins de cases sont proposée, et chaque grille générée aléatoirement
                     </p>
                     <ul class="list_languages">
                         <li>C</li>
@@ -222,7 +233,7 @@
 
 </main>
 
-</br>
+<br>
 
 <footer class="bas">
     <div class="div_bas">
@@ -230,6 +241,26 @@
             <li class="social_li">
                 <a href="https://github.com/MaxenceFroger/Portfolio/" title="Lien Github">
                     <img alt="Github" class="social_image" src="./images/github.svg">
+                </a>
+            </li>
+            <li class="social_li">
+                <a href="https://www.linkedin.com/in/maxence-froger-09b712331/" title="Lien LinkedIn">
+                    <img alt="LinkedIn" class="social_image" src="./images/LinkedIn_icon.svg.png">
+                </a>
+            </li>
+            <li class="social_li">
+                <a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend" title="Lien Indeed">
+                    <img alt="Indeed" class="social_image" src="./images/indeed.png">
+                </a>
+            </li>
+            <li class="social_li">
+                <a href="https://www.hellowork.com/fr-fr/candidat/profil.html" title="Lien HelloWork">
+                    <img alt="HelloWork" class="social_image" src="./images/LOGO_HelloWork.png">
+                </a>
+            </li>
+            <li class="social_li">
+                <a href="https://www.welcometothejungle.com/fr/me/profile" title="Lien WelcomeToTheJungle">
+                    <img alt="WelcomeToTheJungle" class="social_image" src="./images/welcomtothejungle.png">
                 </a>
             </li>
         </ul>

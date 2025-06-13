@@ -1,0 +1,151 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.cv {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left {
+    width: 35%;
+    background-color: #EBF5D7;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    width: 65%;
+    padding: 30px;
+}
+
+.section.reduit p {
+    font-size: 12px !important;
+}
+
+.section.reduit {
+    font-size: 12px !important;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border: 16px solid #145a32;
+    transform: rotate(-5deg);
+    margin-bottom: 20px;
+    background-image: url('./images/Maxence.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.section-title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    background-color: #145a32;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.left .subtitle p {
+    font-size: 20px !important;
+    font-style: italic;
+    text-align: center;
+}
+
+.left .section-title {
+    background-color: transparent;
+    color: #145a32;
+    border-bottom: 2px solid #145a32;
+    padding-left: 0;
+    text-transform: uppercase;
+}
+
+.left .section-title-wrapper {
+    display: block;
+}
+
+.left .triangle {
+    display: none;
+}
+
+.left .section p, .left .section a {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.right .section p {
+    margin: 5px 0;
+}
+
+.right .section-title {
+    box-shadow: -10px 5px 20px #73ba36;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    list-style: none; /* Par défaut, on enlève les puces */
+}
+
+/* Pour les ul avec classe "dot", on remet les puces rondes */
+ul.dot {
+    list-style-type: disc; /* puces rondes classiques */
+    list-style-position: inside;
+}
+
+/* Pour les ul avec classe "tiret", on met pas de puces, mais un tiret personnalisé */
+ul.tiret {
+    list-style-type: none;
+}
+
+ul.tiret li::before {
+    content: "– ";  /* Tiret */
+    color: black;   /* Couleur du tiret */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;     /* espace avant le texte */
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
