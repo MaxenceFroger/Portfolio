@@ -124,14 +124,23 @@ a:focus {
     background-attachment: fixed;
 }
 
+.intro {
+    display: flex;
+    margin: 5% 0% 0% 20%;
+}
+
 .text_intro {
-  margin: 10% 0% 0% 20%;
+    margin: 0% 0% 0% 5%;
 }
 
 .text_intro p {
     max-width: 700px;
     font-family: 'Jost', sans-serif;
     font-size: 2.8rem;
+}
+
+.image_intro {
+    margin: 5% 0% 0% 0%;
 }
 
 .experiences {

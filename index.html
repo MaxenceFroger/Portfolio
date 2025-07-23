@@ -19,23 +19,29 @@
             <ul class="nav_ul">
                 <li class="nav_li"><a class="nav_link" href="#experiences_pro">Expériences</a></li>
                 <li class="nav_li"><a class="nav_link" href="#projets">Projets</a></li>
-                <li class="nav_li">
-                    <a class="nav_link" href="#a_propos">A propos</a>
-                </li>
-                <li class="nav_li">
-                    <a class="nav_link" href="#contact">Contact</a>
-                </li>
+                <li class="nav_li"><a class="nav_link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
-    <div class="text_intro">
-        <h1 class="h1_intro">
-            <span>Maxence Froger</span>
-        </h1>
-        <p>Je m’appelle Maxence Froger, je suis en licence Informatique à l’Université du Havre. Je pratique
-            quotidiennement la programmation et je veux devenir développeur dans le domaine des jeux vidéo. Je programme
-            en Java, en C/C++/C#, en Python, en HTML/CSS/PHP, en SQL, et en Visual Basic.</p>
-        <a class="bouton" href="#contact">Me contacter</a>
+    <div class="intro">
+        <div class="image_intro">
+
+            <div class="_div_image_a_propos">
+                <img alt="" class="a_propos_image" src="./images/Maxence.jpg"/>
+            </div>
+        </div>
+
+        <div class="text_intro">
+            <p>Passionné de jeux vidéo depuis mon enfance, j'ai commencé à m'intéresser à la programmation, d'abord par des commandes dans Minecraft, puis en regardant
+                mon père programmer. J'ai commencé à coder au collège en Visual Basic, puis en Python, en Java, et enfin en C# avant de commencer ma Licence
+                d'Informatique. J'ai depuis appris de nombreux autres langages tels que C, HTML, CSS, PHP, SQL, Shell, Bash, Haskell, Processing, etc, ainsi que certains
+                Frameworks tels que Android Studio ou Unity.
+            </p>
+            <div class="div_bouton_a_propos">
+                <a class="bouton" href="#contact">Me contacter</a>
+                <a class="bouton" href="https://github.com/MaxenceFroger/Portfolio/blob/main/CV/CV%20Maxence%Alternance.pdf">Mon CV</a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -47,21 +53,18 @@
                 <h3>Stage : Création d'un site intranet de type CRM afin de gérer les données du cabinet de psychothérapie et d'améliorer son fonctionnement quotidien.</h3>
                 <p>7 Avril au 6 Juin - Loanne Froger Psychothérapie</p>
                 <p>
-                    La tâche qui m’a été demandé lors de ce stage était de créer un site interne pour
-                    la gestion du cabinet de type CRM. CRM signifie Customer Relationship Management
-                    en anglais, c’est-à-dire la gestion de la relation client. Ce type de logiciel gère toutes les
-                    interactions entre une entreprise et ses clients, ou en l’occurrence : les patients. Mais dans
-                    le cas présent, le site que j'ai réalisé est uniquement un intranet. Voici ce que propose ce site :
+                    Création d'un site interne de type CRM pour la gestion d'un cabinet de psychologue.
+                    Voici les fonctionnalitées ce site :
                 </p>
                 <ul>
-                    <li>Les patients : Une page permettant de créer, modifier, supprimer et sélectionner un patient à l’aide de filtre et de tri, et une fois le patient choisi, on peut gérer toutes ses informations ainsi que son fichier Word.</li>
-                    <li>Les séances : Une page permettant de créer, modifier, supprimer ou sélectionner une séance à l’aide de filtre et de tri, et une fois la séance choisie pouvoir gérer toutes ses informations ainsi que les participants.</li>
-                    <li>Les psychologues : Une page permettant de créer, modifier, supprimer et sélectionner un psychologue à l’aide de filtre et de tri, et une fois le psychologue choisi pouvoir gérer toutes ses informations.</li>
-                    <li>Les questionnaires : Une page permettant de créer, modifier, supprimer des questionnaires, et une autre page permettant d’y saisir les réponses des patients, ainsi que d’enregistrer le psychologue, le patient concerné et noter ce que le psychologue pense des réponses.</li>
-                    <li>La comptabilité : Une page regroupant les tables Compte, Revenu et Dépense en une page avec les revenus et dépenses de chaque compte.</li>
-                    <li>Un système de mail : les rappels automatiques de séance et une page pour pouvoir envoyer des emails de masse si besoin.</li>
-                    <li>Les statuts : Une page permettant de créer, modifier, supprimer et sélectionner un statut.</li>
-                    <li>Les paramètres : Une page paramètre permettant de modifier ses propres informations, ses identifiants/mot de passe, le thème utilisé, et d’accéder à une page de sauvegarde/chargement de la base de donnée pour les administrateurs.</li>
+                    <li>Les patients : créer, modifier, supprimer et sélectionner un patient, filtre, tri, et gestion du fichier Word.</li>
+                    <li>Les séances : créer, modifier, supprimer ou sélectionner une séance, filtre, tri, et gestion des participants.</li>
+                    <li>Les psychologues : créer, modifier, supprimer et sélectionner un psychologue, filtre, et tri.</li>
+                    <li>Les questionnaires : créer, modifier, supprimer des questionnaires, saisir les réponses des patients, enregistrer le psychologue et le patient concerné, et noter ce que le psychologue pense des réponses.</li>
+                    <li>La comptabilité : regroupement des tables Compte, Revenu et Dépense.</li>
+                    <li>Un système de mail : rappels automatiques de séance, et envoie des emails de masse si besoin.</li>
+                    <li>Les statuts : créer, modifier, supprimer et sélectionner un statut.</li>
+                    <li>Les paramètres : paramètres permettant de modifier ses propres informations, ses identifiants/mot de passe, le thème utilisé, et d’accéder à une page de sauvegarde/chargement de la base de donnée pour les administrateurs.</li>
                 </ul>
                 <p>Languages et outils utilisés :</p>
                 <ul class="list_languages_experiences">
@@ -91,7 +94,7 @@
                     <h3>Site de gestion de base de données de figurine Pop</h3>
                     <p>14 Mars 2025 au 27 Mars 2025 - Université du Havre</p>
                     <p>
-                        J'ai créé une base de données normalisée respectant les conventions SQL sur les figurines POP, avec de nombreux Trigger, View et fonction en pl pgsql, le tout en MySQL,PostgrSQL et Oracle.
+                        Création d'une base de données normalisée respectant les conventions SQL sur les figurines POP, avec de nombreux Trigger, View et fonction en pl pgsql, le tout en MySQL,PostgrSQL et Oracle.
                         Ensuite, j'ai développé un site internet CRUD permettant de manipuler la base de donnée, avec notamment une barre de recherche. Ce projet a été réalisé en collaboration avec Maxime Bertois.
                     </p>
                     <ul class="list_languages">
@@ -216,33 +219,15 @@
         </div>
     </section>
 
-    <section class="a_propos" id="a_propos">
-        <h2>A Propos</h2>
-        <div class="div_a_propos">
-
-            <div class="div_a_propos_text">
-            <span>
-              Passionné de jeux vidéo depuis mon enfance, j'ai commencé à m'intéresser à la programmation, d'abord par des commandes dans Minecraft, puis en regardant mon père programmer. J'ai commencé à coder au collège en Visual Basic, puis en Python, en Java, et enfin en C# avant de commencer ma Licence d'Informatique. J'ai depuis appris de nombreux autres langages tels que C, HTML, CSS, PHP, SQL, Shell, Bash, Haskell, Processing, etc, ainsi que certains Frameworks tels que Android Studio ou Unity.
-            </span>
-            </div>
-            <div class="div_bouton_a_propos">
-                <a class="bouton" href="#">Mon CV</a>
-            </div>
-
-            <div class="_div_image_a_propos">
-                <img alt="" class="a_propos_image" src="./images/Maxence.jpg"/>
-            </div>
-
-        </div>
-    </section>
 
     <section class="contact" id="contact">
         <h2>Me Contacter</h2>
         <div class="contact_info">
             <p>
-                Vous pouvez me contacter par cette addresse email :
+                Vous pouvez me contacter avec ces addresses emails :
             </p>
             <a class="bouton" href="mailto:maxence.froger@gmail.com">maxence.froger@gmail.com</a>
+            <a class="bouton" href="mailto:maxence.froger@ynov.com">maxence.froger@ynov.com</a>
         </div>
     </section>
 
